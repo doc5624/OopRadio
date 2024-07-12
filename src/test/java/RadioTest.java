@@ -4,8 +4,28 @@ import org.junit.jupiter.api.Test;
 public class RadioTest {
 
     @Test
+    public void testQuantityRadioStation() {
+        Radio quantityRS = new Radio(15);
+
+        int expected = 15;
+        int actual = quantityRS.getQuantityRadioStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void defaultQuantityRadioStation() {
+        Radio quantityRS = new Radio();
+
+        int expected = 10;
+        int actual = quantityRS.getQuantityRadioStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void shouldSetRadio() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
 
         radio.setRadioStation(5);
 
